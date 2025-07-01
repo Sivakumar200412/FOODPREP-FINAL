@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Outfit:wght@100..900&display=swap');
+
+/* 🌐 Global Theme Variables */
+:root {
+  --theme-color: #21063e;
+  --light-bg: #ffffff;
+  --light-text: #1e1e1e;
+  --dark-bg: #0d0d0d;
+  --dark-text: #f0f0f0;
+  --accent-color: #8c52ff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  width: 80%;
+  margin: auto;
+  padding-top: 20px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* 🌟 Headings & Text */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--theme-color);
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* 🌈 Buttons (Global look if not overwritten elsewhere) */
+button {
+  background: linear-gradient(135deg, var(--theme-color), var(--accent-color));
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  color: white;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* 🎨 Transitions & Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* 🌠 Utility Styles */
+.shadow {
+  box-shadow: 0 8px 16px var(--shadow);
+}
+
+.rounded {
+  border-radius: var(--radius);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark button {
+  background-color: var(--accent-color);
+}
+
+body.dark .app {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark h1, body.dark h2 {
+  color: var(--accent-color);
+}
+.food-card {
+  background: var(--light-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,132 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 5rem 8vw 2rem;
+  margin-top: 10rem;
+  font-size: 1.6rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+.footer-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 6rem;
+}
+
+.footer-logo {
+  width: 180px;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
+.footer-content-left,
+.footer-content-center,
+.footer-content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.footer-content-left p {
+  line-height: 1.8;
+  font-size: 1.5rem;
+  color: #bdbdbd;
+}
+
+.footer-content-center h2,
+.footer-content-right h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--theme-color, #bb86fc);
+  padding-bottom: 0.5rem;
+}
+
+.footer-content-center ul,
+.footer-content-right ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content-center li,
+.footer-content-right li {
+  list-style: none;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer-content-center li:hover,
+.footer-content-right li:hover {
+  color: var(--theme-color, #bb86fc);
+}
+
+.footer-content-center a,
+.footer-content-right a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-social-icons img {
+  width: 36px;
+  margin-right: 15px;
+  transition: transform 0.2s ease;
+  filter: brightness(0.8);
+}
+
+.footer-social-icons img:hover {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
+
+.footer-hr {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  margin: 2rem 0;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #9e9e9e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-content-left,
+  .footer-content-center,
+  .footer-content-right {
+    align-items: center;
+  }
+
+  .footer-social-icons {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
